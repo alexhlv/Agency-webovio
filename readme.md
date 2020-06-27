@@ -7,10 +7,10 @@
 
 **Transfer of winter**
 
-1. **Visibility Area:**
-   - **Local variables**
-   - **External variables**
-   - **Global variables**
+**Visibility Area:**
+- **Local variables**
+- **External variables**
+- **Global variables**
 
 **Return control**
 

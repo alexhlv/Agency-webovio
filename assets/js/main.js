@@ -1,166 +1,95 @@
 /* Завдання 1:*/
-let value = Number(prompt('Введіть число'));
+function week(number) {
+    let message = +prompt('Введіть цифру від 1 до 7');
+    if (message) {
+        let weekDay;
 
-if (value===10) {
-    console.log('Вірно');
+        switch(message) {
+            case 1 : weekDay = 'Понеділок'; break;
+            case 2 : weekDay = 'Вівторок'; break;
+            case 3 : weekDay = 'Середа'; break;
+            case 4 : weekDay = 'Четвер'; break;
+            case 5 : weekDay = 'П\'ятниця'; break;
+            case 6 : weekDay = 'Субота'; break;
+            case 7 : weekDay = 'Неділя'; break;
+            default: weekDay = `День тижня не визначений ${message}!`;
+        }
+
+        console.log(`Сьогодні ${message} день тижня - ${weekDay}`);
+    } else {
+        console.log('Ви не ввели день, або ввели не вірно !');
+    }
 }
-else {
-    console.log('Не вірно');
-}
+
+week();
+week();
+week();
+week();
+week();
+week();
+week();
+week();
 /* Завдання 1:*/
 /* Завдання 2:*/
-let name = prompt('Введіть ваше ім\'я');
 
-if (name==='Jonh') {
-    console.log('Привіт Jonh');
-}
-else {
-    console.log('');
-}
 /* Завдання 2:*/
 /* Завдання 3:*/
-let time = prompt('Введіть значення від 0 до 59');
 
-let result;
-
-if (time >= 0 && time <= 15) {
-    result = 'Перша четверть часа';
-} else if (time >= 16 && time <= 30) {
-    result = 'Друга четверть часа';
-} else if (time >= 31 && time <= 45) {
-    result = 'Третя четверть часа';
-} else if (time >= 46 && time <= 59) {
-    result = 'Четверта четверть часа';
-} else {
-    result = 'Час не відомий';
-}
-console.log(result);
 /* Завдання 3:*/
 /* Завдання 4:*/
-let a = Number(prompt('Введіть значення від 0 до 6'));
-let b = Number(prompt('Введіть значення від 0 до 6'));
 
-let result;
-
-if (a <= 1 && b >= 3) {
-    result = a + b;
-} else if (a === 0 && b === 6) {
-    result = a - b;
-} else if (a === 3 && b === 5) {
-    result = a - b;
-} else {
-    result = 'Змінні задані не вірно';
-}
-
-console.log(result);
 /* Завдання 4:*/
 /* Завдання 5:*/
-let num = prompt('Оцените фильм "Титаник" от 1 до 5');
 
-let result;
-
-switch(num) {
-    case '1':
-        result = 'Зима';
-        break;
-    case '2':
-        result = 'Весна';
-        break;
-    case '3':
-        result = 'Літо';
-        break;
-    case '4':
-        result = 'Осінь';
-        break;
-    default: result = 'Пора року не визначена';
-}
-
-console.log(result);
 /* Завдання 5:*/
 /* Завдання 6:*/
-let login = prompt('Введіть свій логін');
-let password = prompt('Введіть свій пароль');
 
-if (login == 'ivan' && password == 333) {
-    console.log('Ласкаво просимо');
-} else if (login == 'ssss' && password == 666) {
-    console.log('Ласкаво просимо');
-} else if (login == 'gibs' && password == 0000) {
-    console.log('Ласкаво просимо');
-} else {
-    console.log('Користувач не знайдений');
-}
 /* Завдання 6:*/
 /* Завдання 7:*/
-let userAge = prompt('Введіть свій вік');
 
-let userResult = (userAge >= 21) ? "You may enter" :
-    "You may not enter";
-
-console.log(userResult);
 /* Завдання 7:*/
 /* Завдання 8:*/
-let num1 = Number(prompt('Введіть число'));
-let num2 = Number(prompt('Введіть число'));
-let num3 = Number(prompt('Введіть число'));
 
-let maxValue;
-
-if (num1 > num2 && num2 > num3) {
-    maxValue = num1;
-    console.log(maxValue);
-} else if (num1 < num2 && num2 > num3) {
-    maxValue = num2;
-    console.log(maxValue);
-} else if (num1 < num2 && num2 < num3) {
-    maxValue = num3;
-    console.log(maxValue);
-} else if (num1 === num2 && num2 === num3) {
-    console.log('Всі числа рівні');
-}
 /* Завдання 8:*/
 /* Завдання 9:*/
-let num1 = Number(prompt('Введіть число'));
-let num2 = Number(prompt('Введіть число'));
-let num3 = Number(prompt('Введіть число'));
 
-let maxValue = num1;
-let minValue = num2;
-
-if (num2 < minValue) {
-    minValue = num2;
-} if (num3 < minValue) {
-    minValue = num3;
-} if (num2 > maxValue) {
-    maxValue = num2;  
-} if (num3 > maxValue) {
-    maxValue = num3;
-} if (num1 === num2 && num2 === num3) {
-    console.log('Всі числа рівні');
-}
-
-console.log(minValue, maxValue);
 /* Завдання 9:*/
 /* Завдання 10:*/
-let rating = Number(prompt('Введіть число'));
-let mark;
 
-if (rating >= 10) {
-    mark = 5;
-    console.log(mark);
-} else if (rating >= 7 && rating <= 9){
-    mark = 4;
-    console.log(mark);
-} else if (rating >= 5 && rating <= 6) {
-    mark = 3;
-    console.log(mark);
-} else if (rating >= 3 && rating < 5) {
-    mark = 2;
-    console.log(mark);
-} else if (rating <= 2) {
-    mark = 1;
-    console.log(mark);
-}  else {
-    console.log('Вибачте оцінка поставлена не вірно');
-}
 /* Завдання 10:*/
+
+// Задание 2:
+// Напишите функцию, которая проверяет, является ли введенное с клавиатуры число — целым числом.
+
+// Задание 3:
+// Написать функцию которая возводит введенное с клавиатуры число, в степень n,  степень и число вводится с клавиатуры.
+
+// Задание 4:
+// Написать функцию, которая проверяет делится ли число 1 на число 2 без остачи.
+
+// Задание 5:
+// Напишите функцию, которая пишет в консоль число в заданном диапазоне.
+// Используйте Math.random().
+
+// Задание 6:
+// Написать функцию isYearLeap, принимающую 1 аргумент — год, и возвращающую true, если год високосный, и false иначе.
+
+// Подсказка ниже:
+// Високосные года делятся нацело на 4. Однако из этого правила есть исключение: столетия, которые не делятся нацело на 400, високосными не являются.
+// В високосном годе 366 дней, в обычном 365.
+
+// Если год не делится на 4, значит он обычный.
+// Иначе надо проверить не делится ли год на 100.
+// Если не делится, значит это не столетие и можно сделать вывод, что год високосный.
+// Если делится на 100, значит это столетие и его следует проверить его делимость на 400.
+// Если год делится на 400, то он високосный.
+// Иначе год обычный.
+
+// Задание 7:
+// Пользователь делает вклад в размере n рублей сроком на years лет под 10% годовых (каждый год размер его вклада увеличивается на 10%. Эти деньги прибавляются к сумме вклада, и на них в следующем году тоже будут проценты).
+
+// Написать функцию bank, принимающая аргументы n и years, и возвращающую сумму, которая будет на счету пользователя.
+
+// Задание 8:
+// В зависимости от того, что выберет пользователь (ввести в prompt), вычислить площадь либо прямоугольника, либо треугольника, либо круга. Если выбраны прямоугольник или треугольник, то надо запросить длины сторон, если круг, то его радиус.
+// Нужно написать 4 функции, по 1 для каждой фигуры и одна общая.
