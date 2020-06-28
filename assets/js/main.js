@@ -31,78 +31,129 @@
 // week();
 /* Завдання 1:*/
 /* Завдання 2:*/
-let num = Number(prompt('Введіть довільне число'));
+// let num = Number(prompt('Введіть довільне число'));
 
-function integer(number) {
-    if (num === parseInt(num)) {
-        let message = 'Це число ціле';
-        console.log(`${message}`);
-    } else {
-        let message = 'Це число дробове';
-        console.log(`${message}`);
+// function integer(number) {
+//     if (num === parseInt(num)) {
+//         let message = 'Це число ціле';
+//         console.log(`${message}`);
+//     } else {
+//         let message = 'Це число дробове';
+//         console.log(`${message}`);
+//     }
+// }
+
+// integer();
+/* Завдання 2:*/
+/* Завдання 3:*/
+// let numeric = Number(prompt('Введіть довільне число'));
+// let power = Number(prompt('Введіть довільне число'));
+
+// function degree(num1, num2) {
+//     let result = numeric ** power;
+//     console.log(`Якщо число ${numeric} привести до степеню ${power} вийде такий результат ${result}`);
+// }
+
+// degree();
+/* Завдання 3:*/
+/* Завдання 4:*/
+// let a = Number(prompt('Введіть довільне число'));
+// let b = Number(prompt('Введіть довільне число'));
+
+// let message;
+
+// function divisions(num1, num2) {
+//     if (a % b === 0) {
+//         let message = 'Остачі не має';
+//         console.log(`${message}`);
+//     } else {
+//         let message = 'Є остача';
+//         console.log(`${message}`);
+//     }
+// }
+
+// divisions();
+/* Завдання 4:*/
+/* Завдання 5:*/
+// function getRandom(number) {
+//     return Math.random();
+// }
+// console.log(getRandom());
+
+// getRandom();
+// console.log(getRandom());
+/* Завдання 5:*/
+/* Завдання 6:*/
+// function isYearLeap(year) {
+//     if (year % 400 === 0) {
+//         return true;
+//     } else if (year % 100 === 0) {
+//         return false;
+//     } else if (year % 4 === 0) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// console.log( isYearLeap(2000) ); //true
+// console.log( isYearLeap(1200) ); //true
+// console.log( isYearLeap(400) ); //true
+
+// console.log( isYearLeap(1500) ); //false
+// console.log( isYearLeap(1300) ); //false
+// console.log( isYearLeap(1100) ); //false
+/* Завдання 6:*/
+/* Завдання 7:*/
+// function bank(n, year) {
+//     const rate = 1.1;
+//     return n * (year ** rate);
+// }
+
+// const result = bank(
+//     +prompt('Введіть суму коштів'),
+//     +prompt('Введіть кількість років')
+// );
+
+// console.log(result);
+/* Завдання 7:*/
+/* Завдання 8:*/
+const TRIANGLE = 'TRIANGLE';
+const RECTANGLE = 'RECTANGLE';
+const CIRCLE = 'CIRCLE';
+
+function triangleSquare(a, b, c) {
+    const p = 0.5 * (a + b +c);
+    return Math.sqrt (p * (p - a) * (p - b) * (p - c));
+}
+
+function rectangleSquare(a, b) {
+    return a * b;
+}
+
+function circleSquare(r) {
+    return Math.PI * r ** 2;
+}
+
+function calculateSquare () {
+    const figure = prompt('Figure type');
+
+    switch (figure) {
+        case TRIANGLE: return triangleSquare(
+            +prompt('a'),
+            +prompt('b'),
+            +prompt('c'),
+        );
+        case RECTANGLE: return rectangleSquare(
+            +prompt('a'),
+            +prompt('b'),
+        );
+        case CIRCLE: return circleSquare(
+            +prompt('r'),
+        );
+        default: return null;
     }
 }
 
-integer();
-// Задание 2:
-// Напишите функцию, которая проверяет, является ли введенное с клавиатуры число — целым числом.
-/* Завдання 2:*/
-/* Завдання 3:*/
-
-/* Завдання 3:*/
-/* Завдання 4:*/
-
-/* Завдання 4:*/
-/* Завдання 5:*/
-
-/* Завдання 5:*/
-/* Завдання 6:*/
-
-/* Завдання 6:*/
-/* Завдання 7:*/
-
-/* Завдання 7:*/
+console.log( calculateSquare() );
 /* Завдання 8:*/
-
-/* Завдання 8:*/
-/* Завдання 9:*/
-
-/* Завдання 9:*/
-/* Завдання 10:*/
-
-/* Завдання 10:*/
-
-
-
-// Задание 3:
-// Написать функцию которая возводит введенное с клавиатуры число, в степень n,  степень и число вводится с клавиатуры.
-
-// Задание 4:
-// Написать функцию, которая проверяет делится ли число 1 на число 2 без остачи.
-
-// Задание 5:
-// Напишите функцию, которая пишет в консоль число в заданном диапазоне.
-// Используйте Math.random().
-
-// Задание 6:
-// Написать функцию isYearLeap, принимающую 1 аргумент — год, и возвращающую true, если год високосный, и false иначе.
-
-// Подсказка ниже:
-// Високосные года делятся нацело на 4. Однако из этого правила есть исключение: столетия, которые не делятся нацело на 400, високосными не являются.
-// В високосном годе 366 дней, в обычном 365.
-
-// Если год не делится на 4, значит он обычный.
-// Иначе надо проверить не делится ли год на 100.
-// Если не делится, значит это не столетие и можно сделать вывод, что год високосный.
-// Если делится на 100, значит это столетие и его следует проверить его делимость на 400.
-// Если год делится на 400, то он високосный.
-// Иначе год обычный.
-
-// Задание 7:
-// Пользователь делает вклад в размере n рублей сроком на years лет под 10% годовых (каждый год размер его вклада увеличивается на 10%. Эти деньги прибавляются к сумме вклада, и на них в следующем году тоже будут проценты).
-
-// Написать функцию bank, принимающая аргументы n и years, и возвращающую сумму, которая будет на счету пользователя.
-
-// Задание 8:
-// В зависимости от того, что выберет пользователь (ввести в prompt), вычислить площадь либо прямоугольника, либо треугольника, либо круга. Если выбраны прямоугольник или треугольник, то надо запросить длины сторон, если круг, то его радиус.
-// Нужно написать 4 функции, по 1 для каждой фигуры и одна общая.
